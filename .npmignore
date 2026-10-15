@@ -1,0 +1,4 @@
+*.test.ts
+.github/
+coverage/
+tsconfig.json

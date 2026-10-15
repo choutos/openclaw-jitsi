@@ -1,0 +1,48 @@
+{
+  "name": "@choutos/openclaw-jitsi",
+  "version": "0.1.0",
+  "description": "Jitsi Meet browser participant plugin for OpenClaw.",
+  "license": "MIT",
+  "author": "Víctor Andrade",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choutos/openclaw-jitsi.git"
+  },
+  "bugs": { "url": "https://github.com/choutos/openclaw-jitsi/issues" },
+  "homepage": "https://github.com/choutos/openclaw-jitsi#readme",
+  "type": "module",
+  "engines": {
+    "node": ">=24.16.0 <25 || >=26.1.0"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "openclaw": "2026.10.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.0"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.10.3"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.10.3"
+    },
+    "build": {
+      "openclawVersion": "2026.10.3",
+      "pluginSdkVersion": "2026.10.3",
+      "bundledDist": false
+    }
+  }
+}
